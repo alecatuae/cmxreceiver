@@ -30,7 +30,7 @@ function cmxData(data) {
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser')
-app.use(bodyParser.json())
+app.use(bodyParser.json({limit: '50mb'}))
 
 // CMX Location Protocol, see https://documentation.meraki.com/MR/Monitoring_and_Reporting/CMX_Analytics#API_Configuration
 //
